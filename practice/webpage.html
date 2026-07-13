@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-weight: bold;
+      }
+      .main-container {
+        background-color: rgba(37, 33, 33, 0.875);
+        min-height: 100vh;
+        /* background-image: https://stock.adobe.com/in/search?k=night+sky+stars+beach"; */
+        background-image: url("https://images.unsplash.com/photo-1528353518104-dbd48bee7bc4?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");  
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+      .section {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+      }
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 250px;
+        min-width: 400px;
+        padding: 40px;
+        color: white;
+      }
+      .nav-section {
+        display: flex;
+        gap: 40px;
+      }
+      .content {
+        display: flex;
+        justify-content: center;    
+        /* height: 100px; */
+        /* padding: 20px; */
+        font-family: Poppins,sans-serif;
+        font-weight: bold;
+        font-size: 60px;
+        /* height: 100px; */
+        color: white;
+      }
+
+      .foot{
+        display: flex;
+        justify-content: space-around;
+        margin: 50px;
+        padding: 17px;
+        background-color: white;
+        border-radius: 10px;
+        border: 20px solid rgb(28, 24, 24);
+      }
+
+      .min-option{
+        font-weight:100;
+        font-size: small;
+        color:rgb(98, 96, 96)
+      }
+      .mainopt{
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+      }
+
+    button{
+        background-color: rgba(244, 18, 18, 0.731);
+        font-size: 10px;
+        width:150px;
+        height: 40px;
+        padding: 10px;
+        color: white;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="section">
+        <div class="nav">
+          <div class="logo">Tour Travel</div>
+          <div class="nav-section">
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Packages</p>
+            <p>Trending</p>
+            <p>Contact Us</p>
+          </div>
+        </div>
+        <div class="content">Exploring World with Us !</div>
+
+        <div class="foot">          
+            <div class=" mainopt">
+            <div class="q1">
+                <p>Where You Want To Go</p>
+            </div>
+            <div class="min-option">
+                Zip Code / Country
+            </div>
+          </div>
+          <div class="mainopt">
+            <div class="check-in">Check in</div>
+            <div class="min-option">Check- IN</div>
+          </div>
+          <div class="mainopt">
+            <div class="check-out">Check Out</div>
+            <div class="min-option">Check Out</div>
+          </div>
+          <div class="mainopt">
+            <div class="guest-no">How Many Are You ?</div>
+            <div class="min-option">Mention Guests</div>
+          </div>
+
+            <button>Check Availability</button>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

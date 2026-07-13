@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmtl Pages</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <h2>Registration</h2>
+
+        <div>
+            <label for="file" >Choose File</label>     
+            <input type="file" id="image" name="file" accept="image/*">
+       
+        </div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name"  name="name" placeholder="enter name">
+        </div>
+        <div>
+            <label for="Email">Email Id</label>
+            <input type="email" id="Email" name="email" placeholder="enter email-id">
+        </div>
+        <div>
+            <label for="Password">Password</label>
+            <input type="password" id="Password"  name="password" placeholder="enter password">
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female" >Female</label>
+        </div>
+        <div>
+            <label for="education">Education</label>
+            <select id="education" name="education">
+                Education
+                <optgroup label="10th">
+                    <option value="cbse">Cbse</option>
+                    <option value="icse">ICSE</option>
+                    <option value="sb">State Board</option>
+                    <option value="ob">Open Board</option>
+                </optgroup>
+                
+                <optgroup label="12th">
+                    <option value="cbse">Cbse</option>
+                    <option value="icse">ICSE</option>
+                    <option value="sb">State Board</option>
+                    <option value="ob">Open Board</option>
+                </optgroup>
+
+                <optgroup label="Graduation">
+                    <option value="bca">BCA</option>
+                    <option value="bsc">BSC</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="bscmath">BSC.Math</option>
+                </optgroup>
+                <optgroup label="Post Graduation">
+                    <option value="mtech" disabled>M.Tech</option>
+                    <option value="mca">MCA</option>
+                </optgroup>
+                
+            </select>
+        </div>
+        <div>
+            <label for="Subject">Subject</label>
+            <input type="checkbox" id="math" name="subject" value="math">
+            <label for="math">Math</label>
+            <input type="checkbox" id="cs" name="subject" value="cs">
+            <label for="cs">Computer Fundamentals</label>
+            <input type="checkbox" id="ds" name="subject" value="ds">
+            <label for="ds">Data Structure</label>
+            <input type="checkbox" id="coa" name="subject" value="coa">
+            <label for="coa">COA</label>
+            <input type="checkbox" id="cn" name="subject" value="cn">
+            <label for="cn">Computer Networks</label>
+        </div>
+       <div>
+        <label for="passdate"> What year College Graduation</label>
+        <input type="date" id="passdate" name="graduation-date">
+       </div> 
+       <div>
+        <label for="time">Form Submit Time </label>
+        <input type="time" name="Submittime" id="time">
+       </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
