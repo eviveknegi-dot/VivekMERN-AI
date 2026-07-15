@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,200px);
+    justify-content: center;
+
+width: 80%;
+max-width: 1200px;
+overflow: hidden;
+margin: 20px;
+    /* place-content:center; */
+    
+    gap: 20px;
+    padding: 10px 0px;
+    /* height: 60vh; */
+    border: 10px solid black;
+}
+
+.box{
+display: grid;
+place-content: center;
+border: 10px solid palevioletred;
+min-width:0;
+padding: 20px;
+}
+/* .box1{
+grid-area: 1/1/4/2;
+}
+.box2{
+grid-area: 1 / 2 / 2 / 4;
+}
+.box3{
+    grid-area: 1/ 4 / 2 / 12;
+}
+.box6{
+    grid-area: 2/4/4/12;
+
+} */
+
+
+       .box1 {
+            grid-area: 1 / 1 / 4 / 2;
+        }
+
+        .box2 {
+            grid-area: 1 / 2 / 2 / 4;
+        }
+
+        .box3 {
+            grid-area: 1 / 4 / 2 / 5;
+        }
+
+        .box4 {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .box5 {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .box6 {
+            grid-area: 2 / 4 / 4 / 5;
+        }
+
+        .box7 {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        .box8 {
+            grid-area: 3 / 3 / 4 / 4;
+        }
+</style>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="box1 box" style="background-color: red;;">box1</div>
+        <div class="box2 box" style="background-color: royalblue; ;">box2</div>
+        <div class="box3 box" style="background-color: rebeccapurple; ;">box3</div>
+        <div class="box4 box" style="background-color: yellow;;">box4</div>
+        <div class="box5 box" style="background-color: chocolate; ;">box5</div>
+        <div class="box6 box" style="background-color: chartreuse;;">box6</div>
+        <div class="box7 box" style="background-color: cadetblue; ;">box7</div>
+        <div class="box8 box" style="background-color: crimson; ;">box8</div>
+    </div>
+</body>
+</html>
