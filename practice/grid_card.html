@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;box-sizing: border-box;
+        }
+
+        body{
+            margin: 2rem 3rem;
+        }
+
+        .grid{
+            display: grid;
+            /* background-color: palegreen; */
+            grid-template-columns:repeat(4,1fr);
+            grid-template-rows:repeat(2,250px);
+            gap: 15px;
+
+            /* width: 90%;
+            min-width: 1200px;
+            height: 80vh; */
+            /* overflow: hidden; */
+        }
+
+        .card{
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .card1{
+            grid-area: 1/1/3/2;
+        }
+        .card2{
+            grid-area: 1/2/2/4;
+        }
+
+        .image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s linear;
+        }
+
+        .image:hover{
+            transform: scale(1.2);
+        }
+
+
+ .rate{
+            position: absolute;
+            top: 6px;
+}
+
+
+.rate:hover{
+    color: white;
+    background-color: orange;
+    display: none;
+   
+}
+
+.card{
+    position: relative;
+}
+
+.rate:hover{
+/* display: block; */
+position: absolute;
+top: 1rem;
+margin-left: 10px;
+color:red;
+}
+  
+
+
+/* .content{
+    font-size: medium;
+    font-weight: bold;
+    color:white;
+    position: absolute;
+    bottom: 40px;
+    display: none;
+} */
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="grid grid-card">
+        <div class="card1 card">
+            <img src="https://media.istockphoto.com/id/1371289822/photo/himalayan-village-town-of-kalpa-with-kailash-mountain-snow-peaks-at-himachal-pradesh-india.jpg?s=612x612&w=0&k=20&c=ibz1ktqV34YlHk0FeSyBcoykG2IVViXNUxU2NLCGsg8=" alt="himalayan_village" class="image">
+
+            <div class="rate">
+                    <span>7.4</span>
+
+                <span>Himalayas</span>
+                <p>Mountains</p>
+            </div>
+        </div>
+
+        <div class="card2 card">
+            <img src="https://plus.unsplash.com/premium_photo-1661962726504-fa8f464a1bb8?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bG9uZG9uJTIwYnJpZGdlfGVufDB8fDB8fHww" alt="" class="image">
+                <div class="rate">
+                <span>7.4</span>
+                <span>London</span>
+                <p>Bridge</p>
+                </div>
+        </div>
+        
+        <div class="card3 card">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dG9reW98ZW58MHx8MHx8fDA%3D" alt="" class="image">
+                <div class="rate">
+                <span>7.4</span>
+                <span>Tokyo</span>
+                <p>City</p>
+            </div>
+        </div>
+        
+        <div class="card4 card">
+            <img src="https://media.istockphoto.com/id/539115110/photo/colosseum-in-rome-and-morning-sun-italy.jpg?s=612x612&w=0&k=20&c=9NtFxHI3P2IBWRY9t0NrfPZPR4iusHmVLbXg2Cjv9Fs=" alt="" class="image">
+                <div class="rate">
+                    <span>7.4</span>
+                <span>Rome</span>
+                <p>Collesum</p>
+            </div>
+        </div>
+
+        
+        <div class="card5 card">
+            <img src="https://images.unsplash.com/photo-1668361146491-93ef3816a65c?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZWslMjB0ZW1wbGV8ZW58MHx8MHx8fDA%3D" alt="" class="image">
+                <div class="rate">
+                    <span>7.4</span>
+                <span>Greece</span>
+                <p>Temples</p>
+            </div>
+        </div>
+
+        
+        <div class="card6 card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSunW5s5ayGfS2PzIIsftQzUAjr0T7zgoSp6cLM6Ne-zdhPlWB4OM90pIU&s=10" alt="" class="image">
+                <div class="rate">
+                    <span>7.4</span>
+                <span>Sydeny</span>
+                <p>Stadium</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
