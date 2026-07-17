@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main-container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: crimson;
+            height:300px;
+            width: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            /* margin: 88px; */
+        }
+        .up, .down{
+            position: absolute;
+            left: 0%;
+            /* height: 62%;
+            width: 63%; */
+            /* width: 100%;
+            height: 100%; */
+            transition: transform 0.5s linear;
+            z-index: 2;
+        }
+        .up{    
+            position: absolute;
+            background-color: cadetblue;
+            height: 51%;
+            width: 100%;
+            top: 0;
+            transform-origin: top;
+
+        }
+        .down{
+            position: absolute;
+            background-color: steelblue;
+            bottom: 0;
+            transform-origin: bottom;
+            height: 51%;
+            width: 100%;
+        }
+        .content{
+            color: white;
+            font-size: 1.5rem;
+            z-index:1;
+            visibility: hidden;
+        }
+        .main-container:hover .up{
+            transform: translateY(-100%);
+        }
+            .main-container:hover .down{
+            transform: translateY(100%);
+        }
+        .main-container:hover .content{
+             visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main-container"> 
+        <div class="up"></div>
+        <p class="content">hello welcome to hover effect</p>
+        <div class="down"></div>
+    </div>
+</body>
+</html>
