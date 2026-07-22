@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.offer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+
+    padding:70px 60px;
+
+    background:#005ba8;
+}
+
+.offer-left{
+    width:35%;
+    color:#fff;
+}
+
+.offer-left h1{
+    font-size:3rem;
+    margin-bottom:30px;
+}
+
+.offer-left p{
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.offer-left button{
+    padding:16px 34px;
+    background:transparent;
+    color:white;
+    border:2px solid white;
+    border-radius:6px;
+    font-size:18px;
+}
+
+.offer-right{
+    width:65%;
+
+    display:grid;
+    grid-template-columns:repeat(3,280px);
+
+    gap:25px;
+
+    overflow-x:auto;
+}
+
+
+/* card css */
+
+.card{
+
+    width:280px;
+    background:white;
+
+    border-radius:6px;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.card img{
+
+    width:100%;
+    height:160px;
+
+    object-fit:cover;
+}
+
+.content{
+
+    padding:25px;
+
+    text-align:center;
+}
+
+.content h2{
+
+    margin-bottom:18px;
+}
+
+.content p{
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+}
+
+.content button{
+
+    padding:10px 25px;
+
+    border:none;
+
+    background:#e53935;
+
+    color:white;
+
+    border-radius:4px;
+
+    cursor:pointer;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+</style>
+</head>
+<body>
+<section class="offer">
+
+    <div class="offer-left">
+
+        <h1>WHAT WE OFFER</h1>
+
+        <p>
+            Enhancing supply chain efficiency with tailored logistics
+            solutions that minimize costs and ensure timely deliveries.
+            With a nationwide network and advanced technology and a
+            customer-centric approach, every service is customized to
+            meet diverse industry requirements, ensuring seamless
+            operations.
+        </p>
+
+        <button>Enquiry Now →</button>
+
+    </div>
+
+    <div class="offer-right">
+
+        <div class="card">
+            <img src="3pl.jpg" alt="">
+            <div class="content">
+                <h2>3PL</h2>
+                <p>
+                    We excel in providing top-notch Third-Party Logistics
+                    services.
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ftl.jpg" alt="">
+            <div class="content">
+                <h2>EXPRESS - FTL</h2>
+                <p>
+                    Being a distinguished player in the logistics sector.
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ptl.jpg" alt="">
+            <div class="content">
+                <h2>EXPRESS - PTL</h2>
+                <p>
+                    Secure transportation for part truck loads.
+                </p>
+                <button>Read More</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    
+</body>
+</html>

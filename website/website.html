@@ -1,0 +1,482 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .about_us {
+        text-decoration: none;
+        /* width:40px ; */
+        padding: 18px;
+        white-space: nowrap;
+      }
+      .about_options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        gap: 4px;
+        visibility: hidden;
+        opacity: 0;
+        text-decoration: none;
+      }
+
+      .nav-options:hover .about_options {
+        visibility: visible;
+        opacity: 1;
+        text-decoration: none;
+      }
+
+      .but {
+        height: 40px;
+        width: 100px;
+        padding: 4px;
+      }
+
+      .nav-options {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      footer {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border: 10px solid black;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(6, 200px);
+        gap: 20px;
+      }
+
+      .foot {
+        border: 10px solid saddlebrown;
+        /* margin: 20px; */
+        /* padding: 20px; */
+        /* margin-top:0px ; */
+      }
+
+      .custom-gap {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* hero section css */
+      .hero {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczB3dDB5cmswc3B0c3N2cThxNGN5cmVqdmp3anJtYmJodWcwaG1laiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j3OL6mSc2FeV0UHMDg/giphy.gif");
+        width: 100%;
+        height: 100%;
+        /* background-origin: border-box; */
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .buttons {
+        display: flex;
+        background-color: white;
+        width: 125%;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* height: 80px; */
+        padding: 20px;
+        gap: 20px;
+        border-radius: 4px;
+      }
+
+        .buttonstyle{
+                        min-width: 150px;
+              min-height: 32px;
+              border-style: none;
+              background-color: white;
+        }
+
+      /* hover card section  */
+
+
+
+              .card_outer{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            height:140px;
+            top: 10px;
+            padding: 20px;
+
+
+        }
+   
+        .card{
+            position: relative; 
+            overflow: hidden;
+            width: 236px;
+            height: 192px;
+            text-align: justify;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .card_image{
+            width: 18%;
+            height: 21%;
+        }
+
+        .hover-effect{
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: royalblue;
+            transition: 1s ease;
+
+        }
+        .card:hover .hover-effect{
+            transform: translateY(-100%);
+        }
+        .zindex{
+          z-index: 2;
+        }
+        .card:hover h4,
+        .card:hover p,
+        .card:hover .card_image{
+          color: #ffff;;
+        }
+        
+
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div
+        class="nav"
+        style="display: flex; flex-direction: column; height: 200px"
+      >
+        <div
+          class="info"
+          style="
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            background-color: cornflowerblue;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+          "
+        >
+          <div class="contact custom-gap">
+            <span>Phone +91 7669-005-500</span>
+            <span>Email omgroup@olsc.in</span>
+          </div>
+          <div class="socials custom-gap">
+            <img src="" alt="facebook" class="media" />
+            <img src="" alt="whatsapp" class="media" />
+            <img src="" alt="linkedin" class="media" />
+            <img src="" alt="x" class="media" />
+            <img src="" alt="instagram" class="media" />
+            <img src="" alt="youtube" class="media" />
+          </div>
+        </div>
+
+        <div
+          class="navbar"
+          style="
+            width: 100%;
+            background-color: snow;
+            display: flex;
+            min-height: 160px;
+            padding: 0px 40px;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <div class="logo" style="margin-right: 30px">
+            <img src="om.png" alt="logo" style="width: 150px" />
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">About Us ▾</a>
+            <div class="about_options">
+              <a href="#">Our Growth Story</a>
+              <a href="#">Core Team</a>
+              <a href="#">Vision, Mission, & Our Values</a>
+            </div>
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">Our Services ▾</a>
+            <div class="about_options">
+              <a href="#">Our Growth Story</a>
+              <a href="#">Core Team</a>
+              <a href="#">Vision, Mission, & Our Values</a>
+            </div>
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">Industry We Serve▾</a>
+            <div class="about_options">
+              <a href="#">Our Growth Story</a>
+              <a href="#">Core Team</a>
+              <a href="#">Vision, Mission, & Our Values</a>
+            </div>
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">Retail Express</a>
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">ESG</a>
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">Media Room ▾</a>
+            <div class="about_options">
+              <a href="#">Our Growth Story</a>
+              <a href="#">Core Team</a>
+              <a href="#">Vision, Mission, & Our Values</a>
+            </div>
+          </div>
+          <div class="nav-options">
+            <a href="#" class="about_us">Join Us ▾</a>
+            <div class="about_options">
+              <a href="#">Our Growth Story</a>
+              <a href="#">Core Team</a>
+              <a href="#">Vision, Mission, & Our Values</a>
+            </div>
+          </div>
+          <div class="buttons" style="display: flex; gap: 20px">
+            <button
+              class="contact but"
+              style="
+                background-color: white;
+                color: red;
+                border: 2px solid red;
+                border-radius: 8px;
+              "
+            >
+              Contact Us
+            </button>
+
+            <button
+              class="cutomerlogin but"
+              style="background-color: red; color: white; border-radius: 8px"
+            >
+              Customer Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION HA YA 2ND ONE ON PAGE -->
+
+    <!-- hero section  -->
+    <div class="hero">
+      <div
+        class="content"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        "
+      >
+        <h2 style="font-size: 2rem">YOU SET THE DESTINATION</h2>
+        <h1 style="font-size: 4rem">WE CREATE THE PATH</h1>
+        <p style="font-size: 1.5rem">
+          As India's largest end-to-end logistics partner, we simplify <br />
+          transportation, warehousing and supply chain management.
+        </p>
+        <div class="buttons">
+          <button
+            class="shipment buttonstyle"
+            >
+            Track Shipment
+          </button>
+          <button
+            class="locator buttonstyle"
+          >
+            Branch Locator
+          </button>
+          <button
+            class="pickup buttonstyle"
+          >
+            Pickup Request
+          </button>
+          <button
+            class="pinscode buttonstyle"
+          >
+            Serviceable Pincode
+          </button>
+        </div>
+      </div>
+    </div>
+
+<!-- Another section with hover card  -->
+
+    <section style="background-color: #f0fbf9;">
+    <div class="about-container" style="display: flex; gap: 60px; background-color:#f0fbf9; padding: 40px 32px; margin: 40px;">
+        <div class="about-content"
+            style=" font-weight: lighter; max-width: 520px; font-size: 1rem; text-align: justify; line-height:1.5; word-spacing: 2px; ; display:flex; flex-direction: column; padding: 13px; gap: 20px; ">
+            <h1 style="font-size:2rem; color:royalblue; margin-bottom: 1.5rem;">ABOUT US</h1>
+            <p> <strong style="color: blue;"> Om Logistics</strong> Supply Chain (OLSCPL - a wholly owned subsidiary
+                company of Om Logistics Ltd.), with more than three decades of expertise, proudly stands as the premier
+                supply chain and logistics management company in India. We have meticulously developed a
+                state-of-the-art infrastructure, committed to delivering unparalleled services to all our stakeholders.
+                Our core philosophy: "Simplifying Your Business," drives us to provide exceptional solutions. </p>
+            <p> We cater to large commercial enterprises as well as mid and small-scale businesses. Embark on a journey
+                of innovation, reliability and excellence with our team at Om Logistics Supply Chain as we redefine the
+                standards of the supply chain and logistics industry. </p>
+            <p> Our progressive mindset generates trust through work, embodying our mantra, “YOU TRUST US, WE CARE.”
+                Providing services for businesses of all sizes, our team meets every need with a modern approach,
+                ensuring things keep moving smoothly under our expertise. </p>
+
+            <div class="button">
+                <button class="red-more"
+                    style=" font-size: 1rem; color: royalblue; border: 2px solid royalblue; border-radius: 4px; min-height: 50px; width: 40%;"><strong>
+                        Read More -></strong></button>
+            </div>
+        </div>
+
+
+        <div class="card_outer">
+            <div class="card">
+                <div class="card_image zindex">
+                    <img src="box.png" alt="box">
+                </div>
+                <h4 class="zindex">END-TO-END SOLUTIONS</h1>
+
+                    <p class="zindex">Providing a complete suite of logistics services, ensuring seamless supply chain operations from
+                        the
+                        first mile to the last mile.</p>
+                        <div class="hover-effect"></div>
+            </div>
+
+            <div class="card" style=" margin-top: 30px;" >
+                <div class="card_image zindex"> <img src="global.png" alt="globe">
+                </div>
+                <h4 class="zindex">NATIONWIDE CONNECTIVITY</h4>
+
+                <p class="zindex">With an extensive network across India, ensuring efficient transportation and distribution, even in
+                    remote locations.</p>
+                    <div class="hover-effect"></div>
+            </div>
+
+
+
+                        <div class="card" style=" margin-top: -20px;
+">
+                <div class="card_image zindex"> <img src="locator.png" alt="locator"></div>
+                <h4 class="zindex">Customer-Centric Approach</h4>
+
+                <p class="zindex">With a legacy of excellence and innovation, driving business growth with customized solutions,
+                    efficiency and reliability.</p>
+                    <div class="hover-effect"></div>
+            </div>
+
+            <div class="card" style=" margin-top: 10px;">
+                <div class="card_image zindex"> <img src="leaf.png" alt="leaf"></div>
+                <h4 class="zindex">Green Initiatives </h4>
+
+                <p class="zindex">A strong focus on eco-friendly initiatives to curb carbon emissions and promoting sustainable
+                    practices.</p>
+                    <div class="hover-effect"></div>
+            </div>
+        </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <div class="container">
+      <footer>
+        <div class="foot1 foot">
+          <img src="#" alt="om logistic" />
+          <p>Om Logistic Supply Chain Pvt. Ltd.</p>
+          <p>130, Transport Centre, Punjabi Bagh, New Delhi -110035</p>
+          <div class="certification">
+            <img src="" alt="" class="cert" />
+            <img src="" alt="" class="cert" />
+            <img src="" alt="" class="cert" />
+            <img src="" alt="" class="cert" />
+          </div>
+
+          <div class="social">
+            <span>Follow us on</span>
+            <img src="" alt="facebook" class="media" />
+            <img src="" alt="linkedin" class="media" />
+            <img src="" alt="x" class="media" />
+            <img src="" alt="instagram" class="media" />
+            <img src="" alt="youtube" class="media" />
+          </div>
+        </div>
+        <div class="about foot">
+          <span>About</span>
+          <p>Our Growth Story</p>
+          <p>Core Team</p>
+          <p>Vision,Mission and Our Values</p>
+          <p>Retail Express</p>
+          <p>ESG</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="services foot">
+          <span>Our Services</span>
+          <p>3PL Services</p>
+          <p>Express - Full Truck Load</p>
+          <p>Express - Part Truck Load</p>
+          <p>Speed Trucking</p>
+          <p>Air Services</p>
+          <p>Rail Services</p>
+          <p>Warehousing Services</p>
+        </div>
+        <div class="industry-serve foot">
+          <span>Industry We serve</span>
+          <p>Automotive & Engineering</p>
+          <p>Retail & Fashion</p>
+          <p>IT & Customer Electronics</p>
+          <p>Books & Publishing</p>
+          <p>FMCG</p>
+          <p>Projects</p>
+          <p>Healthcare & Pharmaceuticals</p>
+        </div>
+        <div class="join-us foot">
+          <span>Join Us</span>
+          <p>Om Institute</p>
+          <p>Franchise</p>
+          <p>Career</p>
+          <p>Retail Partner</p>
+        </div>
+        <div class="download foot">
+          <p>Download our app now</p>
+          <div class="qr">
+            <img src="" alt="" />
+          </div>
+          <div class="option">
+            <img src="" alt="" class="appstore" />
+            <img src="" alt="" class="playstore" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

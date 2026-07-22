@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .card_outer{
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            height:140px;
+            top: 10px;
+            padding: 20px;
+
+
+        }
+   
+
+        .card{
+            position: relative;
+            overflow: hidden;
+            width: 236px;
+            height: 192px;
+            text-align: justify;
+            justify-content: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 4px;
+            /* z-index: 2; */
+
+        }
+
+        .card_image{
+            width: 18%;
+            height: 21%;
+        }
+
+        .hover-effect{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            background-color: royalblue;
+            transition: .6s ease;
+            /* z-index: 1; */
+        }
+
+        .card:hover .hover-effect{
+            transform: translateY(-100%);
+
+        }
+         
+        h4,
+        p,
+        .card_image{
+            z-index: 2;
+
+
+        }
+        .card:hover h4,
+        .card:hover p{
+            color: #ffff;
+        }
+
+
+        button{
+            overflow: hidden;
+        }
+        .read-more{
+            position: relative;
+            font-size: 1rem;
+            color: royalblue;
+            border: 2px solid royalblue;
+            border-radius: 4px;
+            min-height: 50px;
+            width: 40%;
+            /* overflow: hidden; */
+        }
+        .button-overlay{
+            position: absolute;
+            top:0px;
+            height:100% ;
+            width: 100%;
+        }
+        button:hover .button-overlay{
+            background-color: red;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: 4s ease;
+        }
+        button:hover span {
+            color: white;
+            z-index: 2;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+    <div class="about-container" style="display: flex; gap: 60px; background-color:#f0fbf9; padding: 40px 32px; margin: 40px;">
+        <div class="about-content"
+            style=" font-weight: lighter; max-width: 520px; font-size: 1rem; text-align: justify; line-height:1.5; word-spacing: 2px; ; display:flex; flex-direction: column; padding: 13px; gap: 20px; ">
+            <h1 style="font-size:2rem; color:royalblue; margin-bottom: 1.5rem;">ABOUT US</h1>
+            <p> <strong style="color: blue;"> Om Logistics</strong> Supply Chain (OLSCPL - a wholly owned subsidiary
+                company of Om Logistics Ltd.), with more than three decades of expertise, proudly stands as the premier
+                supply chain and logistics management company in India. We have meticulously developed a
+                state-of-the-art infrastructure, committed to delivering unparalleled services to all our stakeholders.
+                Our core philosophy: "Simplifying Your Business," drives us to provide exceptional solutions. </p>
+            <p> We cater to large commercial enterprises as well as mid and small-scale businesses. Embark on a journey
+                of innovation, reliability and excellence with our team at Om Logistics Supply Chain as we redefine the
+                standards of the supply chain and logistics industry. </p>
+            <p> Our progressive mindset generates trust through work, embodying our mantra, “YOU TRUST US, WE CARE.”
+                Providing services for businesses of all sizes, our team meets every need with a modern approach,
+                ensuring things keep moving smoothly under our expertise. </p>
+
+                <button class="read-more">
+                    <span><strong>
+                        Read More -></strong></span>
+                <div class="button-overlay"></div>
+                    </button>
+
+        </div>
+
+
+        <div class="card_outer">
+            <div class="card">
+                <div class="card_image">
+                    <img src="box.png" alt="box">
+                </div>
+                <h4>END-TO-END SOLUTIONS</h4>
+
+                    <p>Providing a complete suite of logistics services, ensuring seamless supply chain operations from
+                        the
+                        first mile to the last mile.</p>
+                        <div class="hover-effect"></div>
+            </div>
+
+            <div class="card" style=" margin-top: 30px;" >
+                <div class="card_image"> <img src="global.png" alt="globe">
+                </div>
+                <h4>NATIONWIDE CONNECTIVITY</h4>
+
+                <p>With an extensive network across India, ensuring efficient transportation and distribution, even in
+                    remote locations.</p>
+                    <div class="hover-effect"></div>
+            </div>
+
+
+                  <div class="card" style=" margin-top: -20px;
+">
+                <div class="card_image"> <img src="locator.png" alt="locator"></div>
+                <h4>Customer-Centric Approach</h4>
+
+                <p >With a legacy of excellence and innovation, driving business growth with customized solutions,
+                    efficiency and reliability.</p>
+                    <div class="hover-effect"></div>
+            </div>
+
+            <div class="card" style=" margin-top: 10px;">
+                <div class="card_image"> <img src="leaf.png" alt="leaf"></div>
+                <h4>Green Initiatives </h4>
+
+                <p>A strong focus on eco-friendly initiatives to curb carbon emissions and promoting sustainable
+                    practices.</p>
+                    <div class="hover-effect"></div>
+            </div>
+            
+        </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>

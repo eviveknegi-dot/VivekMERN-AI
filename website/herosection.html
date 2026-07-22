@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      .hero {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczB3dDB5cmswc3B0c3N2cThxNGN5cmVqdmp3anJtYmJodWcwaG1laiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j3OL6mSc2FeV0UHMDg/giphy.gif");
+        width: 100%;
+        height: 100%;
+        /* background-origin: border-box; */
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .buttons{
+        display: flex;
+        background-color: white;
+        width:125%;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* height: 80px; */
+        padding: 20px;
+        gap: 20px;
+        border-radius: 4px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- hero section  -->
+    <div class="hero" >
+      <div class="content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px;">
+        <h2 style="font-size: 2rem;">YOU SET THE DESTINATION</h2>
+        <h1 style="font-size: 4rem;">WE CREATE THE PATH</h1>
+        <p  style="font-size: 1.5rem;">
+          As India's largest end-to-end logistics partner, we simplify <br> 
+          transportation, warehousing and supply chain management.
+        </p>
+        <div class="buttons">
+          <button class="shipment" style="min-width:150px; min-height: 32px; border-style: none; background-color: white;" >Track Shipment</button>
+          <button class="locator" style="min-width:150px; min-height: 32px; border-style: none; background-color: white;" >Branch Locator</button>
+          <button class="pickup" style="min-width:150px; min-height: 32px; border-style: none; background-color: white;"  >Pickup Request</button>
+          <button class="pinscode" style="min-width:150px; min-height: 32px; border-style: none; background-color: white;" >Serviceable Pincode</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
