@@ -97,7 +97,7 @@ function pallindrome(text){
  let reverse_word = ans.join("");
 
 
- if(reverse_word.toLowerCase === orginaltext.toLowerCase){
+ if(reverse_word.toLowerCase() === orginaltext.toLowerCase()){
     
     return`Is Palindrome, ${orginaltext}`;
  
