@@ -83,23 +83,32 @@
 // }
 // Question 6 => Check if give string or word is pallindrome or not. eye => eye pallidrome.
 
-    let text = "eye";
-    
-    let orginaltext = text;
+    // let text = "eye";
+  
+
+function pallindrome(text){
+      let orginaltext = text;
 
     let ans = [];
     let size=text.length;
-
-    for(let i = 0; i<size; i++){
-        ans.push(text[i]);
-
-   
+    for(let i =0; i<size; i++){
+        ans.unshift(text[i]);
     }
-let reverse_word = ans.join("");
-console.log(reverse_word);
+ let reverse_word = ans.join("");
 
 
+ if(reverse_word.toLowerCase === orginaltext.toLowerCase){
+    
+    return`Is Palindrome, ${orginaltext}`;
+ 
+}
+else{
+    return`Isn't palindrome", ${orginaltext}`;
+}
 
+}
+ const ans_check = pallindrome("Level");
+ console.log(ans_check);
 
 // Question 7 => Buzz number number last digit 7 or number divisible by 7 
 
@@ -136,15 +145,15 @@ console.log(reverse_word);
 
 // Question 9 => Strong Number = like factorial is equal to original number like 145 !1 !2 !3 !4;
 
-let number= 120;
-let remainder=0;
-let factorial=1;
+// let number= 120;
+// let remainder=0;
+// let factorial=1;
 
 
-let i = 0
-while(number!=0){
+// let i = 0
+// while(number!=0){
    
-i++;
-} 
+// i++;
+// } 
 
-console.log(factorial);
+// console.log(factorial);
