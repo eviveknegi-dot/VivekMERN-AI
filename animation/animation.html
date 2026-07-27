@@ -16,8 +16,8 @@
             background-color: royalblue;
             position:relative;
             overflow: hidden;
-            height: 100vh;
-            /* width: 90%; */
+            height: 800px;
+            width: 800px;
         }
         .size{
             width: 100%;
@@ -28,7 +28,7 @@
             overflow: hidden;
             bottom: 10%;
             width: 250%;
-            /* animation: cityMove 1s infinite linear; */
+            animation: cityMove 10s linear infinite;
             
         }
         .road{
@@ -38,12 +38,13 @@
             bottom: 0%;
             width: 200%;
             /* height: 100px; */
-            animation: roadMove 20s infinite linear;
+            animation: roadMove 4s linear infinite ;
         }
         .flight{
             position: absolute;
             height: 0%;
             left: 80%;
+                animation:fly 15s linear infinite;
         }
         .truck{
             position: absolute;
@@ -51,7 +52,7 @@
             width: 40%; */
             bottom: 0%;
             left: 60%;
-            /* animation: truckMove 1s infinite linear ;  */
+                animation:bounce .4s ease-in-out infinite;
         }
 /* 
         @keyframes truckMove {
@@ -78,21 +79,39 @@
                 transform: translateX(0%);
             }
             100%{
-                transform: translateX(100%);
+                transform: translateX(-50%);
             }
             
         }
+
+        @keyframes fly{
+    from{
+        transform:translateX(0%);
+    }
+    to{
+        transform:translateX(-200px);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-3px);
+    }
+}
+
     </style>
 
 </head>
 <body>
     <div class="container size">
         <div class="city-image size">
-            <img src="cityfotter.svg" alt="city-image">
+            <img src="cityfotter.svg" alt="city-image" style="width: 200%;">
         </div>
         <div class="road" >
-            <img src="road.svg" alt="road" style="width:60%; height: 120%;" >
-            <img src="road.svg" alt="road" style="bottom:20%; left:90%; width:60%; height: 12````0%;" >
+            <img src="road.svg" alt="road" style="width:250%; height: 120%;" >
         </div>
         <div class="flight">
             <img src="flight 1.svg" alt="flight-image" width="200%">
