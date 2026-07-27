@@ -86,29 +86,29 @@
     // let text = "eye";
   
 
-function pallindrome(text){
-      let orginaltext = text;
+// function pallindrome(text){
+//       let orginaltext = text;
 
-    let ans = [];
-    let size=text.length;
-    for(let i =0; i<size; i++){
-        ans.unshift(text[i]);
-    }
- let reverse_word = ans.join("");
+//     let ans = [];
+//     let size=text.length;
+//     for(let i =0; i<size; i++){
+//         ans.unshift(text[i]);
+//     }
+//  let reverse_word = ans.join("");
 
 
- if(reverse_word.toLowerCase() === orginaltext.toLowerCase()){
+//  if(reverse_word.toLowerCase() === orginaltext.toLowerCase()){
     
-    return`Is Palindrome, ${orginaltext}`;
+//     return`Is Palindrome, ${orginaltext}`;
  
-}
-else{
-    return`Isn't palindrome", ${orginaltext}`;
-}
+// }
+// else{
+//     return`Isn't palindrome", ${orginaltext}`;
+// }
 
-}
- const ans_check = pallindrome("Level");
- console.log(ans_check);
+// }
+//  const ans_check = pallindrome("Level");
+//  console.log(ans_check);
 
 // Question 7 => Buzz number number last digit 7 or number divisible by 7 
 
@@ -157,3 +157,75 @@ else{
 // } 
 
 // console.log(factorial);
+
+
+// Question 10 => Fibonacci series. fibbonacci number 0,1,1,2,3,5,8 .... like 0,0+1=1,1+1=2,1+2=3...
+
+
+// let needFebo_num=10;
+// let x=0;
+// let y=1;
+
+// for(let i = 0; i<needFebo_num;i++){
+//     console.log(x);
+    
+
+//     let z =x+y;
+//     x=y;
+//     y=z;
+// }
+
+
+
+
+// Question 11 => Neon number. => number square 9*9= 81 => sum 8+1=9 neon number.
+
+// let number=9;
+// let og_Num=number;
+// let square=number*number;
+// console.log(square);
+// let num_Sum=0;
+// for(let i = 0; number!=0;i++){
+
+//     let remainder=number%10;
+//     num_Sum=num_Sum+remainder;
+//     number=parseInt(number/10);
+
+// }
+// console.log(num_Sum);
+
+// if(og_Num == num_Sum ){
+//     console.log("Neon Number");
+// }
+// else{
+//     console.log("Not neon Number");
+// }
+
+// Question 12 Armstrong number 
+
+// let isArmStrong=153;
+// let og_Arm=isArmStrong;
+// let temp=og_Arm;
+// let number=0;
+
+// let count=0;
+
+// let result=0;
+// for(let i = 1; isArmStrong!=0;i++){
+//     count++;      
+//         isArmStrong= parseInt(isArmStrong/10);
+
+//     }
+// console.log(og_Arm);
+// while(temp!=0){
+//     number=temp%10;
+//     result+=Math.pow(number,count);
+//     temp=parseInt(temp/10);
+
+// }
+// if(result===og_Arm){
+//     console.log("Strong Number",result);
+// }
+// else{
+//     console.log("Not strong Number",result);
+// }
