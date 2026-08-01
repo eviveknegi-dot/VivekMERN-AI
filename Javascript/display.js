@@ -280,24 +280,35 @@ function priceFilter(){
 
     let sortValue=select.value;
     // console.log("sort value",sortValue);
+
+    if(sortValue==="sort"){
+        console.log(sortValue);
+        display(product_info);
+    }
+
     if(sortValue==="low"){
-        product = product_info.sort((a,b)=>a.price-b.price);
+        product = [...product_info].sort((a,b)=>a.price-b.price);
         display(product);
         
 
     }
     if(sortValue==="high"){
-        product = product_info.sort((a,b)=>b.price-a.price);
+        product = [...product_info].sort((a,b)=>b.price-a.price);
         display(product);
         
     }
+
     // console.log(sortValue);
 }
 // priceFilter();
 
 function search(){
+ 
     let input = word.value.toLowerCase();
-
+if(input===""){
+    display(product_info);
+    return
+}
     let searchItem = product_info.filter((product)=>{
         return product.title.toLowerCase().includes(input);
     })
