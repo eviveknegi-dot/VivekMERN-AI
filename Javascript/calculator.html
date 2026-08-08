@@ -1,0 +1,156 @@
+<html>
+    <head></head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.calc{
+    display: grid;
+    grid-template-columns: repeat(4,70px);
+    gap: 10px;
+}
+
+#result{
+    grid-column: 1 / 5;
+    height: 60px;
+    font-size: 25px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button{
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #444;
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+button:nth-child(12),
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(15){
+    background: orange;
+}
+
+button:nth-child(16){
+    background: green;
+}
+
+
+button:nth-child(17){
+    background: red;
+}
+
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="calc">
+                <input type="text" id="result">
+
+                <button onclick="InputValue('1')" value="1">1</button>
+                <button onclick="InputValue('2')" value="2">2</button>
+                <button onclick="InputValue('3')" value="3">3</button>
+                <button onclick="InputValue('4')" value="4">4</button>
+                <button onclick="InputValue('5')" value="5">5</button>
+                <button onclick="InputValue('6')" value="6">6</button>
+                <button onclick="InputValue('7')" value="7">7</button>
+                <button onclick="InputValue('8')" value="8">8</button>
+                <button onclick="InputValue('9')" value="9">9</button>
+                <button onclick="InputValue('10')" value="10">10</button>
+                <button onclick="Opr('+')">+</button>
+                <button onclick="Opr('-')">-</button>
+                <button onclick="Opr('*')">*</button>
+                <button onclick="Opr('/')">/</button>
+
+                <button onclick="result()" value="=">=</button>
+                <button onclick="clr()" value="=">Clear</button>
+
+            </div>
+        </div>
+
+        <script>
+
+
+            let output = document.querySelector("#result")
+            let firstNumber='',secondNumber='', opr1 = '',result1=''
+
+
+            function InputValue(x){
+                console.log(x)
+                
+                output.value += x
+                firstNumber += x
+                console.log("input first ",firstNumber)
+            }
+            function Opr(y){
+                output.value = ''
+                output.value = y
+                opr1 = y
+                console.log("opr first ",firstNumber)
+                secondNumber = firstNumber
+                console.log("opr 2nd ",secondNumber)
+                firstNumber = ''
+            }
+            function result(){
+                // result1 = parseInt(secondNumber) + parseInt(firstNumber)
+                // output.value=result1
+                if(opr1 == "+"){
+                    result1 = parseInt(secondNumber) + parseInt(firstNumber);
+                 }
+                else if(opr1 == "-"){
+                    result1 = parseInt(secondNumber) - parseInt(firstNumber);
+                }
+                else if(opr1 == "*"){
+                    result1 = parseInt(secondNumber) * parseInt(firstNumber);
+                }
+                else if(opr1 == "/"){
+                        if(parseInt(firstNumber) == 0){
+                            output.value = "Cannot divide";
+                                    return;
+                        }
+                result1 = parseInt(secondNumber) / parseInt(firstNumber);
+                    }
+
+            output.value = result1;
+        }
+
+            function clr(){
+                firstNumber = ''
+                secondNumber = ''
+                opr1 = ''
+                output.value = ''
+                console.log("hello")
+            }
+        </script>
+    </body>
+</html>
